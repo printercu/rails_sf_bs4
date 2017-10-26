@@ -1,6 +1,7 @@
 h3 Inline form
 = simple_form_for object, url: root_path, as: 'user_inline',
   wrapper: :inline_form,
+  wrapper_mappings: {boolean: :inline_boolean},
   html: { class: 'form-inline' } do |f|
   = f.error_notification
   = f.input :email, placeholder: 'Enter email'

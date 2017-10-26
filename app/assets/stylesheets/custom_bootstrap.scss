@@ -2,3 +2,27 @@
 
 // Default vertical spacing
 .mb { @extend .mb-3; }
+
+// Apply styles for radion & checkbox collections.
+.form-check {
+  &.radio, &.checkbox {
+    label { @extend .form-check-label; }
+    input { @extend .form-check-input; }
+  }
+}
+
+// Show aller on separate line in inline-form
+.form-inline {
+  .alert { width: 100%; }
+}
+
+// Make errors always visible.
+.invalid-feedback { display: block; }
+
+// Use custom class to make multiselects work.
+.multi-select {
+  .form-control { flex: auto; }
+  // Bootstrap has hardcoded values:
+  // https://github.com/twbs/bootstrap/blob/2e920625395334c8211bff86daed7ffbf21a1f8f/scss/_forms.scss#L205
+  .form-control + .form-control { margin-left: 10px; }
+}
