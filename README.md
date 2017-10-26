@@ -1,24 +1,13 @@
-# README
+# Sample rails app to tune SimpleForm for Bootstrap4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Online Demo](https://localhost:3000/) (TODO: fix link)
 
-Things you may want to cover:
+While Bootstrap4 is still beta, it's bpossible to have it working with SimpleForm with some issues.
+Basic features works fine.
 
-* Ruby version
+For now it requires custom CSS and small patch for SimpleForm to make everything work.
+I hope it's better to wait for BS4 release to fix everything else.
 
-* System dependencies
+## License
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MIT
