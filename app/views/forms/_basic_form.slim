@@ -1,0 +1,16 @@
+h3 Basic form
+= simple_form_for object, url: root_path, method: :get do |f|
+  = f.input :name, hint: 'Test hint'
+  = f.input :email, hint: 'Test hint'
+  = f.input :active, as: :boolean, hint: 'Test hint'
+  = f.input :active, as: :radio_buttons, hint: 'Test hint'
+  = f.input :type, as: :select, collection: %w[One Two], hint: 'Test hint'
+
+  .form-row
+    .col= f.input :name, hint: 'Test hint'
+    .col= f.input :email, hint: 'Test hint'
+
+  = f.input :created_at, as: :date, hint: 'Test hint'
+
+  = f.button :submit, class: 'btn-primary'
+  button.btn.btn-default< Cancel

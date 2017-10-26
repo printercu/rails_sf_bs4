@@ -1,0 +1,19 @@
+ruby:
+  object = User.new
+  errored_object = User.new.tap(&:add_errors)
+
+.container: .row: .col
+  h1 Sample forms
+
+  .row
+    .col: .card.mb: .card-body= render 'basic_form', object: object
+    .col: .card.mb: .card-body= render 'basic_form', object: errored_object
+  .row
+    .col: .card.mb: .card-body= render 'vertical_form', object: object
+    .col: .card.mb: .card-body= render 'vertical_form', object: errored_object
+  .row
+    .col: .card.mb: .card-body= render 'horizontal_form', object: object
+    .col: .card.mb: .card-body= render 'horizontal_form', object: errored_object
+
+  .card.mb: .card-body= render 'inline_form', object: object
+  .card.mb: .card-body= render 'inline_form', object: errored_object
