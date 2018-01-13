@@ -1,6 +1,6 @@
 # Sample rails app to tune SimpleForm for Bootstrap4
 
-[Online Demo](https://rails-sf-bs4.herokuapp.com/)
+[Online Demo](https://rails-sf-bs4.herokuapp.com/) (wait a little for heroku to start the app).
 
 While Bootstrap4 is still beta, it's bpossible to have it working with SimpleForm with some issues.
 Basic features works fine.
