@@ -1,17 +1,5 @@
 # Use this setup block to configure all options available in SimpleForm.
 
-# https://github.com/plataformatec/simple_form/pull/1476
-SimpleForm::Inputs::Base.prepend Module.new {
-  def merge_wrapper_options(options, wrapper_options)
-    if wrapper_options&.key?(:error_class)
-      wrapper_options = wrapper_options.dup
-      error_class = wrapper_options.delete(:error_class)
-      wrapper_options[:class] = "#{wrapper_options[:class]} #{error_class}" if has_errors?
-    end
-    super(options, wrapper_options)
-  end
-}
-
 SimpleForm.setup do |config|
   config.error_notification_class = 'alert alert-danger'
   config.button_class = 'btn btn-default'
@@ -25,7 +13,7 @@ SimpleForm.setup do |config|
   input_options = {error_class: 'is-invalid'}
   label_class = 'col-form-label'
 
-  horizontal_options = wrapper_options.merge(class: 'form-group row')
+  horizontal_options = {class: "#{wrapper_options[:class]} row"}
   horizontal_label_class = "col-sm-3 #{label_class}"
   horizontal_right_class = 'col-sm-9'
   horizontal_right_offset_class = 'offset-sm-3'
